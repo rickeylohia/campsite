@@ -29,5 +29,6 @@ BEGIN
     d_current_date := trunc(SYSDATE);
     FOR i in 1 .. 365 LOOP
             insert into CAMP_BOOKING (ID,DATE_) values (CAMP_BOOKING_ID_SEQ.nextval,d_current_date+i);
-        END LOOP;
+    END LOOP;
+    commit;
 END;
