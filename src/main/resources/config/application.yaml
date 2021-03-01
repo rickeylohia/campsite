@@ -1,0 +1,18 @@
+server:
+  port: 8186
+  servlet:
+    context-path: "/campsite"
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:test
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: test
+    password: test
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    use-new-id-generator-mappings: false
+  jpa:
+    hibernate:
+      ddl-auto: none
