@@ -51,7 +51,7 @@ public class ReservationService {
                 cb.setBookingId(booking.getBookingId());
                 campBookings.add(cb);
             });
-            Thread.sleep(10000);
+            //Thread.sleep(10000);
             if (campBookings.size() == booking.getNoOfDays()) {
                 campBookingRepo.saveAll(campBookings);
                 return bookingRepo.save(booking);
